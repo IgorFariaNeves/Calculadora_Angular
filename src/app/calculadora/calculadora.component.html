@@ -1,0 +1,43 @@
+<div class="calculadora-container">
+    <div class="imagem topo-esquerda"></div>
+    <div class="imagem topo-direita"></div>
+  
+    <div class="calculadora">
+      <div class="display">
+        <input type="text" [(ngModel)]="entrada" readonly>
+      </div>
+  
+      <div class="botoes">
+        <!-- Linha 1 -->
+        <button (click)="limpar()" class="operacao">C</button>
+        <button (click)="adicionarOperacao('/')" class="operacao">/</button>
+        <button (click)="adicionarOperacao('*')" class="operacao">*</button>
+        <button (click)="adicionarOperacao('-')" class="operacao">-</button>
+  
+        <!-- Linha 2 -->
+        <button (click)="adicionarOperacao('7')">7</button>
+        <button (click)="adicionarOperacao('8')">8</button>
+        <button (click)="adicionarOperacao('9')">9</button>
+        <button (click)="adicionarOperacao('+')" class="operacao">+</button>
+  
+        <!-- Linha 3 -->
+        <button (click)="adicionarOperacao('4')">4</button>
+        <button (click)="adicionarOperacao('5')">5</button>
+        <button (click)="adicionarOperacao('6')">6</button>
+        <!-- Adicionando um botão vazio para manter a estrutura -->
+        <button></button>
+  
+        <!-- Linha 4 -->
+        <button (click)="adicionarOperacao('1')">1</button>
+        <button (click)="adicionarOperacao('2')">2</button>
+        <button (click)="adicionarOperacao('3')">3</button>
+        <button (click)="calcular()" class="igual">=</button>
+  
+        <!-- Linha 5 -->
+        <button (click)="adicionarOperacao('00')" class="zero">00</button>
+        <button (click)="adicionarOperacao('0')" class="zero">0</button>
+        <button (click)="adicionarOperacao('.')">.</button>
+      </div>
+    </div>
+  </div>
+  
